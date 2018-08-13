@@ -1,0 +1,19 @@
+td.nome { 
+	width: 200px;
+	text-align: center;
+}
+
+td.tipo {
+	width: 20px;
+	text-align: center;
+}
+
+td.ramo {
+	width: 100px;
+	text-align: center;
+}
+
+td.acoes { 
+	width: 40px;
+	text-align: center;
+}

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns   ="http://www.w3.org/1999/xhtml"
+	  xmlns:h ="http://java.sun.com/jsf/html"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:f ="http://java.sun.com/jsf/core" >
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Catálogos de Livros</title>
+		
+		<h:outputStylesheet library="css" name="tabela.css"/>
+		
+	</h:head>
+	<h:body>
+		<h1>Livros Pessoais</h1>
+		<h:form>
+			<h:commandButton value="Voltar" action="PaginaInicial?faces-redirect=true" />
+			<h:commandButton value="Ajuda" action="#{catalogoLivrosBean.ajuda}" />
+			<br/><br/><br/>
+			
+			<h:messages id="messages" layout="table" errorStyle="color:red" 
+				infoStyle="color:green" warnStyle="color:orange"
+				fatalStyle="color:gray" />
+				
+			<h:panelGrid columns="2">
+				<f:facet name="header">
+					Cadastro de Livro:
+				</f:facet>
+				
+				<h:outputLabel value="Título:" for="titulo"/>
+				<h:panelGroup>
+					<h:inputText value="#{catalogoLivrosBean.livro.titulo}" size="50" id="titulo" />
+					<h:message for="titulo" errorStyle="color:red" />
+				</h:panelGroup>
+								
+				<h:outputLabel value="Autor(es):" for="autores" />
+				<h:panelGroup>
+					<h:inputText value="#{catalogoLivrosBean.livro.autores}" size="50" id="autores" />
+					<h:message for="autores" errorStyle="color:red" />
+				</h:panelGroup>
+								
+				<h:outputLabel value="Assunto:" for="assunto" />				
+				<h:panelGroup id="assunto">				
+					<h:selectOneMenu id="livros" value="#{catalogoLivrosBean.livro.assunto}">
+						<f:selectItem itemValue="---------------" />
+						<f:selectItem itemValue="Romance" />
+						<f:selectItem itemValue="Auto-Ajuda" />
+						<f:selectItem itemValue="Ficção" />
+						<f:selectItem itemValue="Literatura" />
+						<f:selectItem itemValue="História" />
+						<f:selectItem itemValue="Tecnológico" />								
+					</h:selectOneMenu>					
+				</h:panelGroup>					
+				
+				<h:outputLabel value="Edição mais recente?" for="recente"/>
+				<h:panelGroup>
+					<h:selectBooleanCheckbox value="#{catalogoLivrosBean.livro.maisRecente}" id="recente"/>
+					<h:message for="recente" errorStyle="color:red" />
+				</h:panelGroup>
+				
+				<h:outputLabel/>				
+				<h:commandButton value="Incluir" action="#{catalogoLivrosBean.incluirLivro}" />
+			</h:panelGrid>			
+		</h:form>
+		
+		<h:form>
+			Pesquisar pelo título:
+			<h:inputText value="#{catalogoLivrosBean.tituloPesquisa}"
+				valueChangeListener="#{catalogoLivrosBean.tituloPesquisaAlterada}"
+				onchange="submit()" />
+		</h:form>		
+
+		<h:form>
+			<h:dataTable value="#{catalogoLivrosBean.livros}" var="item" border="1"
+					rendered="#{not empty catalogoLivrosBean.livros}" styleClass="tabela" 
+					headerClass="cabecalho" rowClasses="linha1, linha2" >			
+				<h:column >
+					<f:facet name="header">
+						Título
+					</f:facet>
+					<h:outputText value="#{item.titulo}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						Autor(es)
+					</f:facet>
+					<h:outputText value="#{item.autores}" />
+				</h:column>	
+				<h:column>
+					<f:facet name="header">
+						Assunto
+					</f:facet>
+					<h:outputText value="#{item.assunto}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						Versão mais recente?
+					</f:facet>
+					<h:outputText value="#{item.maisRecente ? 'Sim': 'Não'}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						Exclusão
+					</f:facet>
+					<h:commandButton value="Excluir" action="#{catalogoLivrosBean.excluirLivro}">
+							<f:setPropertyActionListener value="#{item}" target="#{catalogoLivrosBean.livroSelecionado}" />
+					</h:commandButton>
+				</h:column>
+			</h:dataTable>
+		</h:form>			
+	</h:body>
+</html>

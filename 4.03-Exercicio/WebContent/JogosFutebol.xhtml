@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns   ="http://www.w3.org/1999/xhtml" 
+	  xmlns:h ="http://java.sun.com/jsf/html"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:f ="http://java.sun.com/jsf/core" >	
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Acompanhamento</title>
+	</h:head>
+	<h:body>					
+		<h:form id="frm">
+			
+			<h:messages showSummary="false" showDetail="true"/>	
+			
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Data do jogo" for="dataJogo"/>
+				<h:inputText id="dataJogo" value="#{acompanhamentoPartidasBean.partida.dataJogo}" 
+					label="Data do Jogo">
+					<f:convertDateTime pattern="dd/MM/yyyy"/>
+					<h:message for="dataJogo" showSummary="true" showDetail="false" />
+				</h:inputText>
+								
+				<h:outputLabel value="Nome time da casa" for="timeCasa"/>
+				<h:panelGroup>
+					<h:inputText id="timeCasa" value="#{acompanhamentoPartidasBean.partida.timeCasa}"/>
+					<h:message for="timeCasa" showSummary="true" showDetail="false" />	
+				</h:panelGroup>				
+				
+				<h:outputLabel value="Gols time da casa" for="golsCasa"/>
+				<h:panelGroup>
+					<h:inputText id="golsCasa" size="3" value="#{acompanhamentoPartidasBean.partida.golsCasa}" 
+						label="Gols time da casa"/>
+					<h:message for="golsCasa" showSummary="true" showDetail="false" />
+				</h:panelGroup>				
+				
+				<h:outputLabel value="Nome time Visitante" for="timeVisitante"/>
+				<h:panelGroup>
+					<h:inputText id="timeVisitante" value="#{acompanhamentoPartidasBean.partida.visitante}"/>
+						<h:message for="timeVisitante" showSummary="true" showDetail="false" />
+					</h:panelGroup>				
+				
+				<h:outputLabel value="Gols time da visitante" for="golsVisitante"/>
+				<h:panelGroup>
+					<h:inputText id="golsVisitante" size="3" value="#{acompanhamentoPartidasBean.partida.golsVisitante}"
+						label="Gols time da visitante"/>
+					<h:message for="golsVisitante" showSummary="true" showDetail="false" />
+				</h:panelGroup>
+				
+				<h:outputLabel value="Arrecadação" for="arrecadacao"/>
+				<h:panelGroup>
+					<h:inputText id="arrecadacao" value="#{acompanhamentoPartidasBean.partida.arrecadacao}"
+						label="Arrecadação"/>
+					<h:message for="arrecadacao" showSummary="true" showDetail="false" />
+				</h:panelGroup>
+				
+				<h:outputLabel/>
+				<h:commandButton value="Incluir" action="#{acompanhamentoPartidasBean.incluir}"/>
+			</h:panelGrid>	
+			
+			<h:dataTable var="componente" value="#{acompanhamentoPartidasBean.partidas}" border="1"
+					rendered="#{not empty acompanhamentoPartidasBean.partidas}">
+				<h:column>
+					<f:facet name="header">Data do Jogo</f:facet>
+					<h:outputText value="#{componente.dataJogo}">
+						<f:convertDateTime pattern="dd/MM/yyyy" locale="pt_BR"/>	
+					</h:outputText>
+				</h:column>
+			
+				<h:column>
+					<f:facet name="header">Time da Casa</f:facet>
+					<h:outputText value="#{componente.timeCasa}"/>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Gols Time da Casa</f:facet>
+					<h:outputText value="#{componente.golsCasa}"/>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">-</f:facet>
+					<h:outputText value="X"/>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Gols Time Visitante</f:facet>
+					<h:outputText value="#{componente.golsVisitante}"/>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Time Visitante</f:facet>
+					<h:outputText value="#{componente.visitante}"/>
+				</h:column>				
+				
+				<h:column>
+					<f:facet name="header">Arrecadação</f:facet>
+					<h:outputText value="#{componente.arrecadacao}">
+						<f:convertNumber type="currency" currencySymbol="R$" locale="pt_BR"/>
+					</h:outputText>
+				</h:column>			
+			</h:dataTable>				
+		</h:form>
+	</h:body>
+</html>

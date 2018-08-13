@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;4.6-AtributoImmediate&apos; to &apos;4.06-AtributoImmediate&apos;&#x0D;&#x0A;- Original element: &apos;4.6-AtributoImmediate&apos;&#x0D;&#x0A;- Renamed element: &apos;4.6-AtributoImmediate&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;4.6-AtributoImmediate&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=4.6-AtributoImmediate" name="4.06-AtributoImmediate" references="true" stamp="1529429245330" version="1.0"/>
+</session>

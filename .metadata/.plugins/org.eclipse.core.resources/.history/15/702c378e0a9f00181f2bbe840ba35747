@@ -1,0 +1,5 @@
+package com.algaworks.cursojsf2.financeiro.model;
+
+public class Lancamento {
+
+}

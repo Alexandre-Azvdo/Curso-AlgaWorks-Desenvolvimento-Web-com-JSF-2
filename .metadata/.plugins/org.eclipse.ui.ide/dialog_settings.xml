@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\Exercicio3.15"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\Exercicio3.12"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\Exercicio2.14"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\Exercicio2.10"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\Exercicio2.6"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\4.01-ConversoresNumerosDatas"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\3.13-ProjetoCursoPrototipoTelaLancamento"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\3.11-ArquivosJavaScriptCSS"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\3.10-AplicandoEstilosEmTabelas"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\3.09-ComponentesDentroDeCelulas"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\3.08-TabelasDeDados"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\3.07-Mensagens"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\3.06-Paineis"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\3.05-BotoesLinks"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\3.04-CamposChecagemBotoesRadio"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\3.03-MenusCaixasListagemItensSelecao"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\3.02-EntradasSaidasTextoImagens"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\2.08-EscopoAplicacaoSessao"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\2.05-ManagedBeans"/>
+			<item value="C:\Users\Alexandre\Dropbox\Cursos\AlgaWorks\workspace2018\2.13-ManipulandoEventosMudancaValor"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>
